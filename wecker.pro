@@ -9,6 +9,7 @@ HEADERS += \
     rtc.h \
     segment14Font.h \
     tft.h \
+    tft_ST7735.h \
     uart_hard.h \
     uart_print.10.h \
     uart_print.h \
@@ -26,6 +27,7 @@ SOURCES += \
     rtc.c \
     segment14Font.c \
     tft.c \
+    tft_ST7735.c \
     uart_hard.c \
     uart_print.c \
     uart_soft_PlayerMini.c \

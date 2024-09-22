@@ -62,7 +62,7 @@ void setRotaton(uint16_t rot) {
 	};
 	
 	switch (rot) {
-		case   0: madctl &= ~((1 << MV, | (1 << MX) | (1 << MY));       ; break;
+        case   0: madctl &= ~((1 << MV) | (1 << MX) | (1 << MY));         break;
 		case  90: madctl &= ~(1 << MY); madctl |= (1 << MX ) | (1 << MV); break;
 		case 180: madctl &= ~(1 << MV); madctl |= (1 << MY ) | (1 << MX); break;
 		case 270: madctl &= ~(1 << MX); madctl |= (1 << MY ) | (1 << MV); break;
@@ -233,7 +233,7 @@ uint8_t send_LCD_Command_Data(uint8_t is_command_or_data, uint8_t val) {
 	set_LCD_CS(low);
 	set_Data_Command(is_command_or_data);
   SPDR = val;
-  while (!(SPSR & (1<<SPIF)));
+    while (!(SPSR & (1<<SPIF))){;}
 	val = SPSR;
 	set_LCD_CS(high);
 	return SPDR;

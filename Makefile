@@ -1,4 +1,4 @@
-SRCS=main.c uhr.c menue.c einstellenForm.c rtc.c i2c.c segment14Font.c paint.c tft.c uart_soft_PlayerMini.c wavPlayer.c
+SRCS=main.c uhr.c menue.c einstellenForm.c rtc.c i2c.c segment14Font.c paint.c tft.c uart_soft_PlayerMini.c wavPlayer.c tft_ST7735.c
 TARGET=gfl_wecker
 
 MCU=atmega328p

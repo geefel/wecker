@@ -325,7 +325,7 @@ uint8_t send_LCD_Command_Data(uint8_t is_command_data, uint8_t val) {
 	set_LCD_CS(low);
 	set_Data_Command(is_command_data);
   SPDR = val;
-  while (!(SPSR & (1<<SPIF)));
+    while (!(SPSR & (1<<SPIF))){;}
 	val = SPSR;
 	set_LCD_CS(high);
 	return SPDR;
@@ -340,11 +340,11 @@ uint8_t get_LCD_Val(uint8_t is_command_data, uint8_t val) {
 	set_Data_Command(is_command_data);
   SPDR = val;
 //send command
-  while (!(SPSR & (1<<SPIF)));
+  while (!(SPSR & (1<<SPIF))){;}
 	val = SPSR;
 	SPDR = 0;
 //reseive data
-	while (!(SPSR & (1<<SPIF)));
+    while (!(SPSR & (1<<SPIF))){;}
 	val = SPSR;
 	set_LCD_CS(high);
 	return SPDR;

@@ -1,6 +1,7 @@
 #include "paint.h"
 #include "uart_soft_PlayerMini.h"
-#include "tft.h"
+//#include "tft.h"
+#include "tft_ST7735.h"
 #include "uhr.h"
 #include "i2c.h"
 #include "uart_hard.h"
