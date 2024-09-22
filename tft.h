@@ -9,6 +9,7 @@
 #define MOSI_PIN 	PINDEF(B, 3) //11
 #define LCD_CS_PIN 	PINDEF(B, 2) //10
 #define LCD_BL_PIN 	PINDEF(B, 1) //9
+#define LCD_RESET   PINDEF(B, 0) //8
 #define LCD_DC_PIN 	PINDEF(D, 7) //7
 #define SD_CS_PIN  	PINDEF(D, 5) //5
 #define TP_CS_PIN  	PINDEF(D, 4) //4
